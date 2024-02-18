@@ -1,15 +1,23 @@
 import random
 
-li = "+-/*!&amp;amp;amp;amp;amp;$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+li = "+-/*!&amp;amp;amp;amp;amp;amp;amp;amp;amp;$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
 ls = list(li)
 random.shuffle(ls)
-psw = ''.join([random.choice(ls) for x in range(12)])
-print(psw)
+
+dict = {}
+def ok():
+    key = input('Какой ключ добавить?')
+    value = input('от чего этот ключ?')
+    dict[key] = value
 
 while True:
-    pi = input('сколько чисел вам нужно напечатать? 4, 5, 6, 10, 100, 1000, 10000')
-    if pi == '4':
+    pi = input('сколько чисел вам нужно напечатать? 4, 5, 6, 10, 100, 1000, 10000  , сохранить, все пароли')
+    if pi == 'сохранить':
+        ok()
+    elif pi == 'все пароли':
+        print(dict)
+    elif pi == '4':
         psw = ''.join([random.choice(ls) for x in range(4)])
         print(psw)
     elif pi == '5':
