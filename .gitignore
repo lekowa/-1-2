@@ -1,6 +1,6 @@
 import random
 
-li = "+-/*!&amp;amp;amp;amp;amp;amp;amp;amp;amp;$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+li = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
 ls = list(li)
 random.shuffle(ls)
